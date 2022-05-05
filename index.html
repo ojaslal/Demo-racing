@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Multiplayer Game</title>
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
@@ -18,20 +20,31 @@
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyDWruNu2MpLPCU6tzxcRm79hKqT5IVBzB8",
-    authDomain: "multiplayer-racing-e2773.firebaseapp.com",
-    databaseURL: "https://multiplayer-racing-e2773-default-rtdb.firebaseio.com",
-    projectId: "multiplayer-racing-e2773",
-    storageBucket: "multiplayer-racing-e2773.appspot.com",
-    messagingSenderId: "695142558940",
-    appId: "1:695142558940:web:68ef57282cb65bed8c1819"
+    apiKey: "AIzaSyAjDjZ9VlK4aJbCyBcteMnKgmDTv1fl_DU",
+
+    authDomain: "game-3f8d0.firebaseapp.com",
+
+    databaseURL: "https://game-3f8d0-default-rtdb.firebaseio.com",
+
+    projectId: "game-3f8d0",
+
+    storageBucket: "game-3f8d0.appspot.com",
+
+    messagingSenderId: "154339587033",
+
+    appId: "1:154339587033:web:017539d011c3a59e105fc8",
+ measurementId: "G-0MQ3PK2RFB"
+
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
 
 <!--database code ends here-->    
-    
+    const app = initializeApp(firebaseConfig);
+
+  const analytics = getAnalytics(app);
+
     
     <script src="js/Player.js"></script>
     <script src="js/Form.js"></script>
